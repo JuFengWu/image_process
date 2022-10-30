@@ -53,9 +53,11 @@ def hand_pos(finger_angle):
     f3 = finger_angle[2]   # 中指角度
     f4 = finger_angle[3]   # 無名指角度
     f5 = finger_angle[4]   # 小拇指角度
-    if f1>=50 and f2>=50 and f3>=50 and f4>=50 and f5>=50:
+
+    print("angles are" + str(f1) + ","+ str(f2) + ","+ str(f3) + ","+ str(f4) + ","+ str(f5))
+    if f1>=50 and f2>=53 and f3>=50 and f4>=50 and f5>=50:
         return '0'
-    elif f1>=50 and f2<50 and f3>=50 and f4>=50 and f5>=50:
+    elif f1>=50 and f2<53 and f3>=50 and f4>=50 and f5>=50:
         return '1'
     elif f1>=50 and f2<50 and f3<50 and f4>=50 and f5>=50:
         return '2'
@@ -74,6 +76,6 @@ def hand_pos(finger_angle):
     elif f1<50 and f2<50 and f3<50 and f4<50 and f5>=50:
         return '9'
     else:
-        return ''
+        return 'error'
         
         
