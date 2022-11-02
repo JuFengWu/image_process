@@ -18,7 +18,9 @@ with mp_hands.Hands(
     image_height, image_width, _ = image.shape
     for hand_landmarks in results.multi_hand_landmarks: # 兩隻手，畫兩次
           mp_drawing.draw_landmarks(
-              image,hand_landmarks,mp_hands.HAND_CONNECTIONS,
+              image, # 影像
+              hand_landmarks, # 點位
+              mp_hands.HAND_CONNECTIONS, #點位連線的方式
               mp_drawing_styles.get_default_hand_landmarks_style(),
               mp_drawing_styles.get_default_hand_connections_style())
      
