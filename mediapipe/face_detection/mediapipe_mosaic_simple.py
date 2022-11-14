@@ -5,7 +5,7 @@ mp_face_detection = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
 
 # For static images:
-file = 'test.png'
+file = 'Lenna.jpg'
 with mp_face_detection.FaceDetection(
     model_selection=1, min_detection_confidence=0.5) as face_detection:
 
